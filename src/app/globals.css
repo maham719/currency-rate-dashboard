@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-size: 400% 400%;
+  height: 100vh;
+}
+
+.table-container h1{
+  font-size: 2rem;
+  color: rgb(2, 1, 1);
+  text-align: center;
+}
+
+.table-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  width: 100%;
+
+}
+
+.table {
+  width: 60%;
+  margin: 0 auto;
+  background-color: black;
+}
+.heading th{
+  background-color: rgb(76, 16, 255);
+  color: white;
+  border: none;
+  border: 3px solid rgb(76, 16, 255);
+
+   padding: 14px;
+  text-align: center;
+  width: 50%;
+}
+
+
+.table td {
+  border: 1px solid rgba(255, 255, 255, 0.27);
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  color: white;
+}
+
+
+
+.table tr:hover {
+  background-color: #eaeaea;
+}
+
+/* This animation is copied from the https://wweb.dev/resources/animated-css-background-generator  not written by me regards syeda maham amjad */
+@keyframes animate {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #4e54c8;
+  overflow: hidden;
+  z-index: -1;
+}
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 19s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+  left: 74%;
+  width: 143px;
+  height: 143px;
+  bottom: -143px;
+  animation-delay: 1s;
+}
+.background li:nth-child(1) {
+  left: 61%;
+  width: 192px;
+  height: 192px;
+  bottom: -192px;
+  animation-delay: 3s;
+}
+.background li:nth-child(2) {
+  left: 41%;
+  width: 141px;
+  height: 141px;
+  bottom: -141px;
+  animation-delay: 2s;
+}
+.background li:nth-child(3) {
+  left: 59%;
+  width: 147px;
+  height: 147px;
+  bottom: -147px;
+  animation-delay: 8s;
+}
+.background li:nth-child(4) {
+  left: 9%;
+  width: 161px;
+  height: 161px;
+  bottom: -161px;
+  animation-delay: 1s;
+}
+.background li:nth-child(5) {
+  left: 15%;
+  width: 150px;
+  height: 150px;
+  bottom: -150px;
+  animation-delay: 17s;
+}
+.background li:nth-child(6) {
+  left: 2%;
+  width: 106px;
+  height: 106px;
+  bottom: -106px;
+  animation-delay: 23s;
+}
+.background li:nth-child(7) {
+  left: 36%;
+  width: 193px;
+  height: 193px;
+  bottom: -193px;
+  animation-delay: 19s;
+}
+.background li:nth-child(8) {
+  left: 79%;
+  width: 152px;
+  height: 152px;
+  bottom: -152px;
+  animation-delay: 21s;
+}
+.background li:nth-child(9) {
+  left: 84%;
+  width: 176px;
+  height: 176px;
+  bottom: -176px;
+  animation-delay: 19s;
+}
