@@ -1,13 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 
-interface CoinData {
-  rates: { [key: string]: number };
-}
-
 export default function CoinMarket() {
-  const API_KEY = "1f77a513c5b29cbad1011074d33d62ed"; 
-  const [data, setData] = useState<CoinData | null>(null);
+  const API_KEY = "1f77a513c5b29cbad1011074d33d62ed";
+  const [data, setData] = useState<any>(null);
 
   useEffect(() => {
     fetch(`http://api.coinlayer.com/live?access_key=${API_KEY}`)
@@ -18,35 +14,41 @@ export default function CoinMarket() {
       });
   }, []);
 
-  return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      <h1>Cryptocurrency Rates</h1>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
-          gap: "15px",
-        }}
-      >
+
+  return (<>
+    <div className="table-container">
+    <h1>Cryptocurrency Rates</h1>
+    <table className="table">
+      <thead className="heading">
+        <tr>
+          <th>Currency</th>
+          <th>Rate (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
         {data?.rates &&
           Object.entries(data.rates).map(([coin, rate]) => (
-            <div
-              key={coin}
-              style={{
-                border: "1px solid #ccc",
-                borderRadius: "8px",
-                padding: "10px",
-                textAlign: "center",
-                boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-              }}
-            >
-              <h2 style={{ margin: "0 0 5px" }}>{coin}</h2>
-              <p style={{ fontSize: "1.2em", fontWeight: "bold" }}>
-                ${rate as number}
-              </p>
-            </div>
+            <tr>
+              <td><strong><b>
+                {coin}</b></strong></td>
+              <td>${rate as number}</td>
+            </tr>
           ))}
-      </div>
-    </div>
-  );
+      </tbody>
+    </table>
+  </div>
+  <ul className="background">
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+</ul>
+  </>
+);
 }
