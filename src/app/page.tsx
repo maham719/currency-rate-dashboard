@@ -4,6 +4,7 @@ type CryptoData = {
   rates: {
     [key: string]: number; 
   };
+}
 export default function CoinMarket() {
   const API_KEY = "1f77a513c5b29cbad1011074d33d62ed";
   const [data, setData] = useState<any>(null);
