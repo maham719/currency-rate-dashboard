@@ -28,7 +28,7 @@ export default function CoinMarket() {
       <tbody>
         {data?.rates &&
           Object.entries(data.rates).map(([coin, rate]) => (
-            <tr>
+            <tr key={coin}>
               <td><strong><b>
                 {coin}</b></strong></td>
               <td>${rate as number}</td>
