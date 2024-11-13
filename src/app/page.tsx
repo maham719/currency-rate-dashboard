@@ -9,7 +9,9 @@ type CryptoData = {
 
 export default function CoinMarket() {
   const API_KEY = "1f77a513c5b29cbad1011074d33d62ed";
-  const [data, setData] = useState<CryptoData | null>(null); 
+const [data, setData] = useState<CryptoData>({
+  rates: {},
+});
 
   useEffect(() => {
     fetch(`https://api.coinlayer.com/live?access_key=${API_KEY}`)
