@@ -50,6 +50,7 @@ body {
 
 .table tr:hover {
   background-color: #eaeaea;
+  color:black;
 }
 
 /* This animation is copied from the https://wweb.dev/resources/animated-css-background-generator  not written by me regards syeda maham amjad */
